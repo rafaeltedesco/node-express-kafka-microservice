@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  orders_service:
+    container_name: orders_service
+    image: node:18-alpine
+    working_dir: /usr/app
+    volumes:
+      - ./orders_service/:/usr/app
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+    tty: true
+    stdin_open: true
+  payment_service:
+    container_name: payment_service
+    image: node:18-alpine
+    working_dir: /usr/app
+    volumes:
+      - ./payment_service/:/usr/app
+    tty: true
+    stdin_open: true
+  kafka:
+    container_name: kafka
+    image: bitnami/kafka
+    ports:
+      - 9092:9029
+    environment:
+      - ALLOW_PLAINTEXT_LISTENER=yes
+
+

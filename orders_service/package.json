@@ -1,0 +1,21 @@
+{
+  "name": "orders_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "restore:db": "cp ./src/data/orders_bkp.json ./src/data/orders.json" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "kafka-node": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
