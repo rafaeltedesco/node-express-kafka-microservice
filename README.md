@@ -8,16 +8,16 @@ Simple App to explain how to use Kafka (Producer and Consumer) in a context wher
   docker compose up -d
 ```
 
-### Enter orders_service container and `npm start`
+### Enter `orders_service` container and `npm i && npm start`
 
 ```bash
   docker exec -it orders_service sh
-  npm start
+  npm i && npm start
 ```
 
-### Enter payment_service container and `npm start` also
+### Enter `payment_service` container and `npm i && npm start` also
 
 ```bash
   docker exec -it payment_service sh
-  npm start
+  npm i && npm start
 ```
